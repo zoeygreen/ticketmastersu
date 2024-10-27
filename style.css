@@ -1,0 +1,415 @@
+/* Custom styling for layout adjustments */
+body{
+    font-size: 15px;
+}
+.mini-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40; /* Light background color */
+    padding: 10px 20px; /* Padding for spacing */
+}
+
+.left-section, .right-section {
+    display: flex;
+    align-items: center;
+}
+.category-nav_wrapper{
+    box-shadow: 2px 5px 12px 4px #e5e6e7;
+    overflow: hidden; /* Hide overflow for sliding effect */
+}
+.left-section a,
+.right-section a {
+    margin-right: 15px; /* Space between links */
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.hamburger-icon {
+    cursor: pointer; /* Pointer on hover */
+}
+
+@media (max-width: 767px) {
+    .left-section,
+    .right-section {
+        display: none; /* Hide sections on mobile */
+    }
+
+    .hamburger-icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.hero {
+    background-color: #333; /* or use var(--pepper-grey); if defined in CSS variables */
+    background-image: url('../img/bg.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding: 25px 0;
+    color: #fff; /* or use var(--white); if defined in CSS variables */
+}
+
+.container {
+    text-align: left; /* Aligns text to the left */
+    max-width: 1250px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .hero {
+        margin-bottom: 0;
+        background-size: 50vw;
+    }
+}
+@media (min-width: 768px) {
+    .sub-nav {
+        flex-direction: row;
+    }
+}
+.sub-nav {
+    margin-bottom: 10px; /* Space between breadcrumb and heading */
+}
+
+.breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display breadcrumb items inline */
+}
+
+.breadcrumbs li {
+    margin-right: 10px; /* Space between items */
+    font-size: 13px;
+}
+
+.breadcrumbs li a {
+    color: #ffffff; /* White color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.breadcrumbs li.active {
+    color: #aaa; /* Color for the active breadcrumb */
+}
+
+h1 {
+    margin: 0;
+    font-size: 44px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h2{
+    font-weight: bold;
+    font-size: 15px;
+}
+h5{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lead {
+    margin-top: 10px; /* Add space between the heading and lead text */
+}
+.category-nav_wrapper {
+    overflow: hidden; /* Hide overflow for sliding effect */
+}
+
+.zd-slider {
+    position: relative;
+}
+
+.category-nav {
+    transition: transform 0.3s ease; /* Smooth sliding effect */
+    white-space: nowrap; /* Prevent wrapping of menu items */
+}
+
+.zd-slider_item {
+    list-style: none; /* Remove bullet points */
+    padding: 0 15px; /* Space between menu items */
+}
+
+.nav_link {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
+    font-weight: bold; /* Bold text */
+}
+
+.zd-paddle {
+    background: transparent; /* No background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 20px; /* Increase icon size */
+    color: #333; /* Icon color */
+}
+
+.zd-paddle:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Mobile Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned below the toggle */
+    background-color: #000; /* Dropdown background color */
+    color: #fff; /* Dropdown text color */
+    width: 100%; /* Full width */
+    border-radius: 0; /* No border radius */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.dropdown-item {
+    color: white; /* Text color for dropdown items */
+    padding: 10px; /* Padding for dropdown items */
+    text-decoration: none; /* Remove underline */
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+}
+
+/* Show the dropdown when toggled */
+.show {
+    display: block; /* Show dropdown */
+}
+/* Style adjustments for head_text */
+.head_text {
+    height: 52px;
+    font-size: 23px;
+    padding: 13px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.head_text p {
+    margin: 0; /* Remove extra spacing */
+    font-size: 23px; /* Responsive font size for smaller screens */
+}
+
+@media (max-width: 768px) {
+    .head_text {
+        font-size: 18px; /* Adjust font size on tablets and smaller devices */
+        padding: 10px;
+        height: auto; /* Allow flexible height on smaller screens */
+    }
+    .head_text p {
+        font-size: 23px; /* Smaller font size for mobile */
+    }
+}
+
+
+/* Responsive Search Styling */
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    background-color: transparent;
+    border: 1px solid #d3d3d3;
+    padding-right: 30px;
+    color: #ffffff;
+    width: 350px;
+    height: 38px;
+}
+
+/* Search icon and placeholder color */
+.search-input::placeholder {
+    color: #ffffff;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #d3d3d3;
+}
+
+/* Responsive for Search */
+@media (max-width: 576px) {
+    .search-input {
+        width: 200px;
+        padding-right: 15px;
+        display: none;
+    }
+
+    .search-container .fas.fa-search {
+        display: none;
+    }
+}
+
+.user-avatar {
+    height: 25px;
+    width: 25px;
+    border-radius: 0%;
+    display: inline-block;
+    vertical-align: middle;
+    filter: invert(1);
+}
+.bg-blue {
+        background-color: #034cdf; /* You can adjust the shade of blue as needed */
+        color: white;
+    }
+.account a {
+    font-size: 14px;
+    color:#fff !important;
+}
+.footer-logo {
+    max-width: 150px;
+}
+.logo{
+    max-height: 30px;
+        vertical-align: unset;
+    }
+.logo span {
+    margin: 0.5px;
+    color: #fff;
+    font-size: 14px;
+}
+ /* Custom style for search input */
+.search-input {
+    background-color: transparent;
+    border: 1px solid #d3d3d3;
+    padding-right: 30px;
+    color: #ffffff;
+    width: 350px;
+    height: 38px;
+}
+
+/* Default placeholder color (white) */
+.search-input::placeholder {
+    color: #ffffff;
+    opacity: 1; /* Ensure placeholder color is not transparent */
+}
+
+/* Placeholder color on focus (lighter shade) */
+.search-input:focus::placeholder {
+    color: #d3d3d3;
+}
+
+/* Keeping the border color consistent on focus */
+.search-input:focus {
+    outline: none; /* Remove default outline */
+    border-color: #d3d3d3; /* Keep border color light */
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #d3d3d3;
+    pointer-events: none;
+}
+.card {
+    border: 1px solid rgba(0, 0, 0, .125); /* Remove default border */
+    margin-bottom: 15px; /* Space between cards */
+}
+
+.card-header {
+    background-color: #fff; /* Light background for header */
+    cursor: pointer; /* Pointer cursor for clickable area */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    padding: 18px 40px 18px 18px;
+
+}
+
+.card-header:hover {
+    background-color: #f8f9fa; /* Slightly darker background on hover */
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); /* Light shadow effect on hover */
+}
+
+.arrow-icon {
+    font-size: 1.2rem; /* Size of the arrow icon */
+    transition: transform 0.3s ease; /* Transition for arrow rotation */
+}
+
+.card-header.collapsing .arrow-icon {
+    transform: rotate(180deg); /* Rotate arrow when collapsing */
+}
+
+.card-header[aria-expanded="false"] .arrow-icon {
+    transform: rotate(0deg); /* Rotate arrow to point down */
+}
+
+.card-body {
+    background-color: #ffffff; /* Background for card body */
+    padding: 15px; /* Padding inside card body */
+}
+.left-section {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+}
+
+.icon {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+    margin-right: 15px; /* Space between icon and dropdown */
+}
+
+.small-icon {
+    width: 20px; /* Set width of the icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.language-link {
+    font-size: 14px; /* Adjust font size for the link */
+    color: #333; /* Color for the language link */
+    text-decoration: none; /* Remove underline */
+}
+
+.dropdown-toggle {
+    font-size: 14px; /* Adjust font size for the dropdown link */
+    color: #333; /* Color for dropdown link */
+    text-decoration: none; /* Remove underline */
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown menu initially */
+    position: absolute; /* Position dropdown relative to parent */
+    background-color: black; /* Background color for dropdown */
+    color: white; /* Text color for dropdown items */
+    min-width: 150px; /* Minimum width for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+    padding: 10px 0; /* Padding around dropdown items */
+}
+
+.dropdown-menu li {
+    padding: 10px 15px; /* Padding for each dropdown item */
+}
+
+.dropdown-menu li a {
+    color: white; /* Text color for dropdown items */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the link fill the entire area */
+}
+
+.dropdown-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Show dropdown when toggle is clicked */
+.dropdown.show .dropdown-menu {
+    display: block; /* Show dropdown menu when toggled */
+}
+
+/* Bottom line for dropdown */
+.dropdown-menu::after {
+    content: "";
+    display: block;
+    height: 1px; /* Height of the bottom line */
+    background-color: rgba(255, 255, 255, 0.2); /* Light color for the bottom line */
+    margin-top: 10px; /* Space above the bottom line */
+}
+
